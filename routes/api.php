@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
-| API Routes
+| API \es
 |--------------------------------------------------------------------------
 |
 | Here is where you can register API routes for your application. These
@@ -18,3 +18,8 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 
+// Rest api requests
+Route::post('/events/create', 'EventsController@create');
+Route::post('/events/delete', 'EventsController@delete');
+Route::post('/events/edit', 'EventsController@edit');
+Route::get('/events/all', 'EventsController@getall');
